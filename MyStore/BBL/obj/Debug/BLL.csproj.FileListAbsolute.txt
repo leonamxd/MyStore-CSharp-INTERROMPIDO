@@ -1,0 +1,11 @@
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\bin\Debug\BBL.dll
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\bin\Debug\BBL.pdb
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\bin\Debug\DAL.dll
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\bin\Debug\Modelo.dll
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\bin\Debug\DAL.pdb
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\bin\Debug\Modelo.pdb
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\obj\Debug\BBL.dll
+C:\Users\Leonam\source\repos\MyStore\MyStore\BBL\obj\Debug\BBL.pdb

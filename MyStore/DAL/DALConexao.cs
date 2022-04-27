@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class DALConexao
+    public class DALConexao
     {
         public String _StringConexao { get; set; }
         public SqlConnection _conexao { get; set; }
