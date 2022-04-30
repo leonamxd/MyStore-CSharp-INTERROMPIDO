@@ -9,7 +9,7 @@ using System.Data;
 
 namespace BBL
 {
-    class BLLCategoria
+    public class BLLCategoria
     {
         public DALConexao conexao { get; set; }
 

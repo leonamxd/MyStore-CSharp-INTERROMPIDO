@@ -23,7 +23,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao._conexao;
             cmd.CommandText = "Insert into categoria(cat_nome)" +
-                " value (@nome) select @@IDENTITY;";
+                " values(@nome) select @@IDENTITY;";
             cmd.Parameters.AddWithValue("@nome", _modelo.Cat_nome);
             conexao.Conectar();
             _modelo.Cat_cod = Convert.ToInt32(cmd.ExecuteScalar());
@@ -57,7 +57,7 @@ namespace DAL
         public DataTable Localizar(String _value)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from categoria" +
+            SqlDataAdapter da = new SqlDataAdapter("Select * from categoria " +
                 "where cat_nome like '%" + _value + "%'",
                 conexao._StringConexao);
             da.Fill(tabela);

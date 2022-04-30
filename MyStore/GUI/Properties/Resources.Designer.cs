@@ -63,9 +63,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Alterar {
+        internal static System.Drawing.Bitmap cancel_64px {
             get {
-                object obj = ResourceManager.GetObject("Alterar", resourceCulture);
+                object obj = ResourceManager.GetObject("cancel_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Avançar1_fw {
+        internal static System.Drawing.Bitmap create_64px {
             get {
-                object obj = ResourceManager.GetObject("Avançar1.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("create_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cancelar {
+        internal static System.Drawing.Bitmap delete_64px {
             get {
-                object obj = ResourceManager.GetObject("Cancelar", resourceCulture);
+                object obj = ResourceManager.GetObject("delete_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Excluir {
+        internal static System.Drawing.Bitmap save_64px {
             get {
-                object obj = ResourceManager.GetObject("Excluir", resourceCulture);
+                object obj = ResourceManager.GetObject("save_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap localizar_fw {
+        internal static System.Drawing.Bitmap search_64px {
             get {
-                object obj = ResourceManager.GetObject("localizar.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("search_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Novo {
+        internal static System.Drawing.Bitmap search2_64px {
             get {
-                object obj = ResourceManager.GetObject("Novo", resourceCulture);
+                object obj = ResourceManager.GetObject("search2_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,39 +123,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap primeiro {
+        internal static System.Drawing.Bitmap update_64px {
             get {
-                object obj = ResourceManager.GetObject("primeiro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Salvar1_fw {
-            get {
-                object obj = ResourceManager.GetObject("Salvar1.fw", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Ultimo {
-            get {
-                object obj = ResourceManager.GetObject("Ultimo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Voltar1_fw {
-            get {
-                object obj = ResourceManager.GetObject("Voltar1.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("update_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

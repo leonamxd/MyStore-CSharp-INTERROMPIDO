@@ -52,6 +52,12 @@
     <Compile Include="frmCadastroCategoria.Designer.cs">
       <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCategoria.Designer.cs">
+      <DependentUpon>frmConsultaCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModeloDeFormularioDeCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadastroCategoria.resx">
+      <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaCategoria.resx">
+      <DependentUpon>frmConsultaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModeloDeFormularioDeCadastro.resx">
       <DependentUpon>frmModeloDeFormularioDeCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,34 +122,25 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Alterar.png" />
+    <None Include="Resources\cancel_64px1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Avançar1.fw.png" />
+    <None Include="Resources\create_64px1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Cancelar.png" />
+    <None Include="Resources\delete_64px1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Excluir.png" />
+    <None Include="Resources\save_64px1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\localizar.fw.png" />
+    <None Include="Resources\search_64px1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Novo.png" />
+    <None Include="Resources\update_64px1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\primeiro.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Salvar1.fw.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ultimo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Voltar1.fw.png" />
+    <None Include="Resources\search2_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

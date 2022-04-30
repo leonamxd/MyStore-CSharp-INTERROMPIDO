@@ -65,7 +65,7 @@ namespace GUI
             // btExcluir
             // 
             this.btExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExcluir.Image = global::GUI.Properties.Resources.Excluir;
+            this.btExcluir.Image = global::GUI.Properties.Resources.delete_64px;
             this.btExcluir.Location = new System.Drawing.Point(372, 3);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(90, 90);
@@ -78,7 +78,7 @@ namespace GUI
             // btAlterar
             // 
             this.btAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAlterar.Image = global::GUI.Properties.Resources.Alterar;
+            this.btAlterar.Image = global::GUI.Properties.Resources.update_64px;
             this.btAlterar.Location = new System.Drawing.Point(249, 3);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(90, 90);
@@ -91,7 +91,7 @@ namespace GUI
             // btLocalizar
             // 
             this.btLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLocalizar.Image = global::GUI.Properties.Resources.localizar_fw;
+            this.btLocalizar.Image = global::GUI.Properties.Resources.search_64px;
             this.btLocalizar.Location = new System.Drawing.Point(126, 3);
             this.btLocalizar.Name = "btLocalizar";
             this.btLocalizar.Size = new System.Drawing.Size(90, 90);
@@ -104,7 +104,7 @@ namespace GUI
             // btInserir
             // 
             this.btInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btInserir.Image = global::GUI.Properties.Resources.Novo;
+            this.btInserir.Image = global::GUI.Properties.Resources.create_64px;
             this.btInserir.Location = new System.Drawing.Point(3, 3);
             this.btInserir.Name = "btInserir";
             this.btInserir.Size = new System.Drawing.Size(90, 90);
@@ -117,7 +117,7 @@ namespace GUI
             // btCancelar
             // 
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancelar.Image = global::GUI.Properties.Resources.Cancelar;
+            this.btCancelar.Image = global::GUI.Properties.Resources.cancel_64px;
             this.btCancelar.Location = new System.Drawing.Point(667, 3);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(90, 90);
@@ -130,7 +130,7 @@ namespace GUI
             // btSalvar
             // 
             this.btSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSalvar.Image = global::GUI.Properties.Resources.Salvar1_fw;
+            this.btSalvar.Image = global::GUI.Properties.Resources.save_64px;
             this.btSalvar.Location = new System.Drawing.Point(548, 3);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(90, 90);
@@ -158,13 +158,13 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.Panel pnDados;
-        private System.Windows.Forms.Panel pnBotoes;
-        private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.Button btSalvar;
-        private System.Windows.Forms.Button btExcluir;
-        private System.Windows.Forms.Button btAlterar;
-        private System.Windows.Forms.Button btLocalizar;
-        private System.Windows.Forms.Button btInserir;
+        protected System.Windows.Forms.Panel pnDados;
+        protected System.Windows.Forms.Panel pnBotoes;
+        protected System.Windows.Forms.Button btCancelar;
+        protected System.Windows.Forms.Button btSalvar;
+        protected System.Windows.Forms.Button btExcluir;
+        protected System.Windows.Forms.Button btAlterar;
+        protected System.Windows.Forms.Button btLocalizar;
+        protected System.Windows.Forms.Button btInserir;
     }
 }

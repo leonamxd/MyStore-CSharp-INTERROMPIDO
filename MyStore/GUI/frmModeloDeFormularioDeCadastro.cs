@@ -92,7 +92,7 @@ namespace GUI
 
         protected void frmModeloDeFormularioDeCadastro_Load(object sender, EventArgs e)
         {
-            alterarBotoes(1);
+            
         }
 
         protected void pnBotoes_Paint(object sender, PaintEventArgs e)
