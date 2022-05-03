@@ -1,7 +1,7 @@
-﻿using System;
-using Modelo;
+﻿using BLL;
 using DAL;
-using BLL;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,34 +11,45 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmCadastroCategoria : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroSubCategorias : GUI.frmModeloDeFormularioDeCadastro
     {
-        public frmCadastroCategoria()
+        public frmCadastroSubCategorias()
         {
             InitializeComponent();
         }
 
-        private void LimpaTela()
+        public void LimpaTela()
         {
-            txtCodigo.Clear();
-            txtNome.Clear();
+            txtScatNome.Clear();
+            txtScatCod.Clear();
         }
 
-        private void frmCadastroCategoria_Load(object sender, EventArgs e)
+        private void frmCadastroSubCategorias_Load(object sender, EventArgs e)
         {
             alterarBotoes(1);
+            DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
+            BLLCategoria bll = new BLLCategoria(cx);
+            cbCatCod.DataSource = bll.Localizar("");
+            cbCatCod.DisplayMember = "cat_nome";
+            cbCatCod.ValueMember = "cat_cod";
         }
 
         private void btInserir_Click_1(object sender, EventArgs e)
         {
-            operacao = "inserir";
             alterarBotoes(2);
+            operacao = "inserir";
         }
 
         private void btCancelar_Click_1(object sender, EventArgs e)
         {
-            LimpaTela();
             alterarBotoes(1);
+            LimpaTela();
+        }
+
+        private void btAlterar_Click_1(object sender, EventArgs e)
+        {
+            alterarBotoes(2);
+            operacao = "alterar";
         }
 
         private void btSalvar_Click_1(object sender, EventArgs e)
@@ -46,24 +57,25 @@ namespace GUI
             try
             {
                 //Leitura dos Dados
-                ModeloCategoria modelo = new ModeloCategoria();
-                modelo.Cat_nome = txtNome.Text;
+                ModeloSubCategoria modelo = new ModeloSubCategoria();
+                modelo.Scat_nome = txtScatNome.Text;
+                modelo.FK_Cat_cod = Convert.ToInt32(cbCatCod.SelectedValue);
 
                 //Objeto para gravar os dadaos no banco
                 DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
-                BLLCategoria bll = new BLLCategoria(cx);
+                BLLSubCategoria bll = new BLLSubCategoria(cx);
 
                 if (operacao.Equals("inserir"))
                 {
                     //Cadastrar uma Categoria
                     bll.Incluir(modelo);
-                    MessageBox.Show("Cadastro Efetuado: Código " 
-                        + modelo.Cat_cod.ToString());
+                    MessageBox.Show("Cadastro Efetuado: Código "
+                        + modelo.Scat_cod.ToString());
                 }
                 else
                 {
                     //Alterar uma Categoria
-                    modelo.Cat_cod = Convert.ToInt32(txtCodigo.Text);
+                    modelo.Scat_cod = Convert.ToInt32(txtScatCod.Text);
                     bll.Alterar(modelo);
                     MessageBox.Show("Cadastro Alterado");
                 }
@@ -74,13 +86,6 @@ namespace GUI
             {
                 MessageBox.Show(erro.Message);
             }
-            
-        }
-
-        private void btAlterar_Click_1(object sender, EventArgs e)
-        {
-            operacao = "alterar";
-            alterarBotoes(2);
         }
 
         private void btExcluir_Click_1(object sender, EventArgs e)
@@ -92,8 +97,8 @@ namespace GUI
                 if (d.ToString().Equals("Yes"))
                 {
                     DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
-                    BLLCategoria bll = new BLLCategoria(cx);
-                    bll.Excluir(Convert.ToInt32(txtCodigo.Text));
+                    BLLSubCategoria bll = new BLLSubCategoria(cx);
+                    bll.Excluir(Convert.ToInt32(txtScatCod.Text));
                     LimpaTela();
                     alterarBotoes(1);
                 }
@@ -108,16 +113,18 @@ namespace GUI
 
         private void btLocalizar_Click_1(object sender, EventArgs e)
         {
-            frmConsultaCategoria f = new frmConsultaCategoria();
+            
+            frmConsultaSubCategoria f = new frmConsultaSubCategoria();
             f.ShowDialog();
             if (f.codigo != 0)
             {
                 DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
-                BLLCategoria bll = new BLLCategoria(cx);
+                BLLSubCategoria bll = new BLLSubCategoria(cx);
 
-                ModeloCategoria modelo = bll.CarregaModeloCategoria(f.codigo);
-                txtCodigo.Text = modelo.Cat_cod.ToString();
-                txtNome.Text = modelo.Cat_nome;
+                ModeloSubCategoria modelo = bll.CarregaModeloSubCategoria(f.codigo);
+                txtScatCod.Text = modelo.Scat_cod.ToString();
+                txtScatNome.Text = modelo.Scat_nome;
+                cbCatCod.SelectedValue = modelo.FK_Cat_cod;
                 alterarBotoes(3);
             }
             else

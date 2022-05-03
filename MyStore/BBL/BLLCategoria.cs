@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Modelo;
 using System.Data;
 
-namespace BBL
+namespace BLL
 {
     public class BLLCategoria
     {

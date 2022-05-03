@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class frmConsultaCategoria
+    partial class frmConsultaSubCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -29,56 +29,53 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.btLocalizar = new System.Windows.Forms.Button();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Categoria";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(15, 39);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(682, 20);
-            this.txtValor.TabIndex = 1;
-            this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             // 
             // dgvDados
             // 
             this.dgvDados.AllowUserToAddRows = false;
             this.dgvDados.AllowUserToDeleteRows = false;
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDados.Location = new System.Drawing.Point(12, 87);
+            this.dgvDados.Location = new System.Drawing.Point(14, 82);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(757, 462);
-            this.dgvDados.TabIndex = 3;
-            this.dgvDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellContentClick);
+            this.dgvDados.TabIndex = 7;
             this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
             // 
             // btLocalizar
             // 
             this.btLocalizar.Image = global::GUI.Properties.Resources.search2_64px;
-            this.btLocalizar.Location = new System.Drawing.Point(717, 27);
+            this.btLocalizar.Location = new System.Drawing.Point(719, 22);
             this.btLocalizar.Name = "btLocalizar";
             this.btLocalizar.Size = new System.Drawing.Size(52, 42);
-            this.btLocalizar.TabIndex = 2;
+            this.btLocalizar.TabIndex = 6;
             this.btLocalizar.UseVisualStyleBackColor = true;
             this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
             // 
-            // frmConsultaCategoria
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(17, 34);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(682, 20);
+            this.txtValor.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "SubCategoria";
+            // 
+            // frmConsultaSubCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,10 +84,10 @@ namespace GUI
             this.Controls.Add(this.btLocalizar);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label1);
-            this.Name = "frmConsultaCategoria";
+            this.Name = "frmConsultaSubCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consulta Categoria";
-            this.Load += new System.EventHandler(this.frmConsultaCategoria_Load);
+            this.Text = "frmConsultaSubCategoria";
+            this.Load += new System.EventHandler(this.frmConsultaSubCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,9 +96,9 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.Button btLocalizar;
         private System.Windows.Forms.DataGridView dgvDados;
+        private System.Windows.Forms.Button btLocalizar;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.Label label1;
     }
 }

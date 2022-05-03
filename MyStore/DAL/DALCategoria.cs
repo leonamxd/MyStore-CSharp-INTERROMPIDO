@@ -78,7 +78,7 @@ namespace DAL
             {
                 registro.Read();
                 modelo.Cat_cod = Convert.ToInt32(registro["cat_cod"]);
-                modelo.Cat_nome = Convert.ToString(registro["cat-nome"]);
+                modelo.Cat_nome = Convert.ToString(registro["cat_nome"]);
             }
             conexao.Desconectar();
             return modelo;

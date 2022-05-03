@@ -17,3 +17,5 @@ C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmPrincipal.reso
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmModeloDeFormularioDeCadastro.resources
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmCadastroCategoria.resources
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmConsultaCategoria.resources
+C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmCadastroSubCategorias.resources
+C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmConsultaSubCategoria.resources
