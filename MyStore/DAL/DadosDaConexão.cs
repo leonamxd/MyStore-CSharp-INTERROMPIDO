@@ -12,7 +12,7 @@ namespace DAL
         {
             get
             {
-                return "Data Source=DESKTOP-PP47R87\\SQLEXPRESS;Initial Catalog=MyStore;User ID=sa;Password=321300Xd";
+                return @"Data Source=DESKTOP-PP47R87\SQLEXPRESS;Initial Catalog=MyStore;User ID=sa;Password=321300Xd";
             }
         }
 
