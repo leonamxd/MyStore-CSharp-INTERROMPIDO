@@ -6,3 +6,4 @@ C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.csproj.AssemblyRe
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.dll
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.pdb
+C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.csproj.CopyComplete
