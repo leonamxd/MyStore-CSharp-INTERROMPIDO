@@ -104,5 +104,13 @@ namespace GUI
         {
 
         }
+
+        private void frmModeloDeFormularioDeCadastro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SelectNextControl(ActiveControl, !e.Shift, true, true, true);
+            }
+        }
     }
 }
