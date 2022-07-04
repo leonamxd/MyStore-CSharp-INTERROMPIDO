@@ -21,3 +21,5 @@ C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmCadastroSubCat
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmConsultaSubCategoria.resources
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmCadastroUnidadeDeMedida.resources
+C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmConsultaUnidadeDeMedida.resources

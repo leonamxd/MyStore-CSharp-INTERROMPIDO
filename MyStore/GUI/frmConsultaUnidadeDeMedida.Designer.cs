@@ -1,7 +1,6 @@
-﻿
-namespace GUI
+﻿namespace GUI
 {
-    partial class frmConsultaSubCategoria
+    partial class frmConsultaUnidadeDeMedida
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +29,9 @@ namespace GUI
         private void InitializeComponent()
         {
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.btLocalizar = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btLocalizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,16 +48,6 @@ namespace GUI
             this.dgvDados.TabIndex = 7;
             this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
             // 
-            // btLocalizar
-            // 
-            this.btLocalizar.Image = global::GUI.Properties.Resources.search2_64px;
-            this.btLocalizar.Location = new System.Drawing.Point(719, 22);
-            this.btLocalizar.Name = "btLocalizar";
-            this.btLocalizar.Size = new System.Drawing.Size(52, 42);
-            this.btLocalizar.TabIndex = 6;
-            this.btLocalizar.UseVisualStyleBackColor = true;
-            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
-            // 
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(17, 34);
@@ -71,11 +60,21 @@ namespace GUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "SubCategoria";
+            this.label1.Text = "Unidade de Medida";
             // 
-            // frmConsultaSubCategoria
+            // btLocalizar
+            // 
+            this.btLocalizar.Image = global::GUI.Properties.Resources.search2_64px;
+            this.btLocalizar.Location = new System.Drawing.Point(719, 22);
+            this.btLocalizar.Name = "btLocalizar";
+            this.btLocalizar.Size = new System.Drawing.Size(52, 42);
+            this.btLocalizar.TabIndex = 6;
+            this.btLocalizar.UseVisualStyleBackColor = true;
+            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
+            // 
+            // frmConsultaUnidadeDeMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,10 +83,10 @@ namespace GUI
             this.Controls.Add(this.btLocalizar);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label1);
-            this.Name = "frmConsultaSubCategoria";
+            this.Name = "frmConsultaUnidadeDeMedida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consulta SubCategoria";
-            this.Load += new System.EventHandler(this.frmConsultaSubCategoria_Load);
+            this.Text = "Consulta Unidade de Medida";
+            this.Load += new System.EventHandler(this.frmConsultaUnidadeDeMedida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
