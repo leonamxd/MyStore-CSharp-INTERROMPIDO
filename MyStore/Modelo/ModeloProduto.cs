@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class ModuloProduto
+    public class ModeloProduto
     {
         public int Pro_cod { get; set; }
         public String Pro_nome { get; set; }
@@ -20,7 +20,7 @@ namespace Modelo
         public int Cat_cod { get; set; }
         public int Scat_cod { get; set; }
 
-        public ModuloProduto()
+        public ModeloProduto()
         {
             Pro_cod = 0;
             Pro_nome = "";
@@ -32,7 +32,7 @@ namespace Modelo
             Scat_cod = 0;
         }
 
-        public ModuloProduto(int pro_cod, string pro_nome, string pro_descricao,
+        public ModeloProduto(int pro_cod, string pro_nome, string pro_descricao,
             string pro_foto, double pro_valorPago, double pro_valorVenda,
             int pro_quantidade, int umed_cod, int cat_cod, int scat_cod)
         {
@@ -48,7 +48,7 @@ namespace Modelo
             Scat_cod = scat_cod;
         }
 
-        public ModuloProduto(int pro_cod, string pro_nome, string pro_descricao,
+        public ModeloProduto(int pro_cod, string pro_nome, string pro_descricao,
            Byte[] pro_foto, double pro_valorPago, double pro_valorVenda,
            int pro_quantidade, int umed_cod, int cat_cod, int scat_cod)
         {
