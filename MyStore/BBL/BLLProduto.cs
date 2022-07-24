@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DAL;
 using Modelo;
 
-namespace BBL
+namespace BLL
 {
     public class BLLProduto
     {

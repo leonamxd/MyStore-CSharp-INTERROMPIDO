@@ -47,14 +47,14 @@
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.cbSubCategoria = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btLoadFoto = new System.Windows.Forms.Button();
             this.btRemoveFoto = new System.Windows.Forms.Button();
             this.pnDados.SuspendLayout();
             this.pnBotoes.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnDados
@@ -81,6 +81,14 @@
             this.pnDados.Controls.Add(this.label3);
             this.pnDados.Controls.Add(this.label2);
             this.pnDados.Controls.Add(this.label1);
+            // 
+            // btCancelar
+            // 
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click_1);
+            // 
+            // btSalvar
+            // 
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click_1);
             // 
             // btInserir
             // 
@@ -195,6 +203,7 @@
             this.txtQtde.Name = "txtQtde";
             this.txtQtde.Size = new System.Drawing.Size(90, 20);
             this.txtQtde.TabIndex = 12;
+            this.txtQtde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtde_KeyPress);
             // 
             // txtValorPago
             // 
@@ -202,6 +211,8 @@
             this.txtValorPago.Name = "txtValorPago";
             this.txtValorPago.Size = new System.Drawing.Size(90, 20);
             this.txtValorPago.TabIndex = 13;
+            this.txtValorPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorPago_KeyPress);
+            this.txtValorPago.Leave += new System.EventHandler(this.txtValorPago_Leave);
             // 
             // txtValorVenda
             // 
@@ -209,6 +220,8 @@
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(90, 20);
             this.txtValorVenda.TabIndex = 14;
+            this.txtValorVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorVenda_KeyPress);
+            this.txtValorVenda.Leave += new System.EventHandler(this.txtValorVenda_Leave);
             // 
             // cbUnidade
             // 
@@ -225,6 +238,7 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(142, 21);
             this.cbCategoria.TabIndex = 16;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
             // cbSubCategoria
             // 
@@ -237,21 +251,21 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbFoto);
             this.panel1.Location = new System.Drawing.Point(548, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 323);
             this.panel1.TabIndex = 18;
             // 
-            // pictureBox1
+            // pbFoto
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 321);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbFoto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbFoto.Location = new System.Drawing.Point(0, 0);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(207, 321);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto.TabIndex = 0;
+            this.pbFoto.TabStop = false;
             // 
             // label10
             // 
@@ -270,6 +284,7 @@
             this.btLoadFoto.Size = new System.Drawing.Size(90, 60);
             this.btLoadFoto.TabIndex = 20;
             this.btLoadFoto.UseVisualStyleBackColor = true;
+            this.btLoadFoto.Click += new System.EventHandler(this.btLoadFoto_Click);
             // 
             // btRemoveFoto
             // 
@@ -279,6 +294,7 @@
             this.btRemoveFoto.Size = new System.Drawing.Size(90, 58);
             this.btRemoveFoto.TabIndex = 21;
             this.btRemoveFoto.UseVisualStyleBackColor = true;
+            this.btRemoveFoto.Click += new System.EventHandler(this.btRemoveFoto_Click);
             // 
             // frmCadastroProduto
             // 
@@ -291,7 +307,7 @@
             this.pnDados.PerformLayout();
             this.pnBotoes.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,7 +332,7 @@
         private System.Windows.Forms.Button btLoadFoto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.ComboBox cbSubCategoria;
         private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.ComboBox cbUnidade;
