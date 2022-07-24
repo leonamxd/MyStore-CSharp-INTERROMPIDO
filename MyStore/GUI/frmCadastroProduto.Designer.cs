@@ -90,6 +90,10 @@
             // 
             this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click_1);
             // 
+            // btExcluir
+            // 
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click_1);
+            // 
             // btInserir
             // 
             this.btInserir.Click += new System.EventHandler(this.btInserir_Click_1);

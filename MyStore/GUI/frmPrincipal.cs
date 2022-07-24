@@ -70,5 +70,12 @@ namespace GUI
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaProduto f = new frmConsultaProduto();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

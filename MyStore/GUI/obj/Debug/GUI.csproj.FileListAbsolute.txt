@@ -24,3 +24,4 @@ C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.csproj.CopyComple
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmCadastroUnidadeDeMedida.resources
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmConsultaUnidadeDeMedida.resources
 C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmCadastroProduto.resources
+C:\Users\Leonam\source\repos\MyStore\MyStore\GUI\obj\Debug\GUI.frmConsultaProduto.resources

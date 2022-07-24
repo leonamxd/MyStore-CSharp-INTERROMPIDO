@@ -139,6 +139,28 @@ namespace GUI
                 MessageBox.Show(erro.Message);
             }
         }
+        private void btExcluir_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult d = MessageBox.Show("Deseja excluir o registro?",
+                    "Aviso", MessageBoxButtons.YesNo);
+                if (d.ToString().Equals("Yes"))
+                {
+                    DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
+                    BLLProduto bll = new BLLProduto(cx);
+                    bll.Excluir(Convert.ToInt32(txtCodigo.Text));
+                    LimpaTela();
+                    alterarBotoes(1);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Impossivel excluir o registro." +
+                    "\n O registro está sendo ultilizado em outro local.");
+                alterarBotoes(3);
+            }
+        }
 
 
 

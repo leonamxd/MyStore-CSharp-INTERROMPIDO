@@ -95,8 +95,13 @@ namespace DAL
         public DataTable Localizar(String _valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Produto" +
-                " where pro_nome like '%" + _valor + "%'", conexao._StringConexao);
+            SqlDataAdapter da = new SqlDataAdapter("Select pro_cod, pro_nome, pro_descricao, " +
+                "pro_foto, pro_valorpago, pro_valorvenda, pro_qtde, pro.umed_cod, " +
+                "pro.cat_cod, pro.scat_cod, umed_nome, cat_nome, scat_nome from produto pro " +
+                "inner join undmedida umd on pro.umed_cod = umd.umed_cod " +
+                "inner join categoria cat on pro.cat_cod = cat.cat_cod " +
+                "inner join subcategoria sct on pro.scat_cod = sct.scat_cod " +
+                "where pro.pro_nome like '%" + _valor + "%'", conexao._StringConexao);
             da.Fill(tabela);
             return tabela;
         }
@@ -119,7 +124,7 @@ namespace DAL
                 {
                     modelo.Pro_foto = (byte[])registro["pro_foto"];
                 }
-                catch 
+                catch
                 {
                 }
                 modelo.Pro_valorPago = Convert.ToDouble(registro["pro_valorpago"]);
