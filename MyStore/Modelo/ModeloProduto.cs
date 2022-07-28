@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+// ReSharper disable All
 
 namespace Modelo
 {
@@ -68,7 +65,7 @@ namespace Modelo
         {
             try
             {
-                if (string.IsNullOrEmpty(_imgCaminho))
+                if (!string.IsNullOrEmpty(_imgCaminho))
                 {
                     FileInfo arqImagem = new FileInfo(_imgCaminho);
 

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Modelo;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Modelo;
+// ReSharper disable All
 
 namespace DAL
 {
@@ -43,7 +40,6 @@ namespace DAL
             cmd.Parameters.AddWithValue("@undmedcod", _obj.Umed_cod);
             cmd.Parameters.AddWithValue("@catcod", _obj.Cat_cod);
             cmd.Parameters.AddWithValue("@scatcod", _obj.Scat_cod);
-
 
             conexao.Conectar();
             _obj.Pro_cod = Convert.ToInt32(cmd.ExecuteScalar());
@@ -83,7 +79,7 @@ namespace DAL
             cmd.Parameters.AddWithValue("@valorpago", _obj.Pro_valorPago);
             cmd.Parameters.AddWithValue("@valorvenda", _obj.Pro_valorVenda);
             cmd.Parameters.AddWithValue("@qtde", _obj.Pro_quantidade);
-            cmd.Parameters.AddWithValue("@undmedcod", _obj.Umed_cod);
+            cmd.Parameters.AddWithValue("@umedcod", _obj.Umed_cod);
             cmd.Parameters.AddWithValue("@catcod", _obj.Cat_cod);
             cmd.Parameters.AddWithValue("@scatcod", _obj.Scat_cod);
             cmd.Parameters.AddWithValue("@codigo", _obj.Pro_cod);
@@ -130,10 +126,11 @@ namespace DAL
                 modelo.Pro_valorPago = Convert.ToDouble(registro["pro_valorpago"]);
                 modelo.Pro_valorVenda = Convert.ToDouble(registro["pro_valorvenda"]);
                 modelo.Pro_quantidade = Convert.ToInt32(registro["pro_qtde"]);
-                modelo.Umed_cod = Convert.ToInt32(registro["undmed_cod"]);
+                modelo.Umed_cod = Convert.ToInt32(registro["umed_cod"]);
                 modelo.Cat_cod = Convert.ToInt32(registro["cat_cod"]);
                 modelo.Scat_cod = Convert.ToInt32(registro["scat_cod"]);
             }
+            conexao.Desconectar();
             return modelo;
         }
     }

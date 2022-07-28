@@ -94,6 +94,14 @@
             // 
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click_1);
             // 
+            // btAlterar
+            // 
+            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click_1);
+            // 
+            // btLocalizar
+            // 
+            this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click_1);
+            // 
             // btInserir
             // 
             this.btInserir.Click += new System.EventHandler(this.btInserir_Click_1);
@@ -181,6 +189,7 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(3, 44);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(90, 20);

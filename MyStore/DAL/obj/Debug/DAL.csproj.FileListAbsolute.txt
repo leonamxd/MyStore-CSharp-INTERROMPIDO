@@ -4,6 +4,6 @@ C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\bin\Debug\Modelo.dll
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\bin\Debug\Modelo.pdb
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.dll
 C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.pdb
-C:\Users\Leonam\source\repos\MyStore\MyStore\DAL\obj\Debug\DAL.csproj.CopyComplete

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL;
+﻿using DAL;
 using Modelo;
+using System;
+using System.Data;
+// ReSharper disable All
 
 namespace BLL
 {

@@ -2,18 +2,17 @@
 using DAL;
 using Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
+using System.IO;
 using System.Windows.Forms;
+// ReSharper disable All
 
 namespace GUI
 {
     public partial class frmCadastroProduto : GUI.frmModeloDeFormularioDeCadastro
     {
         public string foto = "";
+
         public frmCadastroProduto()
         {
             InitializeComponent();
@@ -60,6 +59,7 @@ namespace GUI
             cbUnidade.DisplayMember = "umed_nome";
             cbUnidade.ValueMember = "umed_cod";
         }
+
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
@@ -78,6 +78,7 @@ namespace GUI
                 //MessageBox.Show("Cadastre uma categoria");
             }
         }
+
         private void btLoadFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog od = new OpenFileDialog();
@@ -88,16 +89,19 @@ namespace GUI
                 pbFoto.Load(foto);
             }
         }
+
         private void btRemoveFoto_Click(object sender, EventArgs e)
         {
             foto = "";
             pbFoto.Image = null;
         }
+
         private void btCancelar_Click_1(object sender, EventArgs e)
         {
             alterarBotoes(1);
             LimpaTela();
         }
+
         private void btSalvar_Click_1(object sender, EventArgs e)
         {
             try
@@ -105,6 +109,7 @@ namespace GUI
                 //Leitura dos dados
                 ModeloProduto modelo = new ModeloProduto();
                 modelo.Pro_nome = txtNome.Text;
+
                 modelo.Pro_descricao = txtDescricao.Text;
                 modelo.Pro_valorPago = Convert.ToDouble(txtValorPago.Text);
                 modelo.Pro_valorVenda = Convert.ToDouble(txtValorVenda.Text);
@@ -112,7 +117,6 @@ namespace GUI
                 modelo.Umed_cod = Convert.ToInt32(cbUnidade.SelectedValue);
                 modelo.Cat_cod = Convert.ToInt32(cbCategoria.SelectedValue);
                 modelo.Scat_cod = Convert.ToInt32(cbSubCategoria.SelectedValue);
-                modelo.CarregaImagem(foto);
 
                 //Obj para gravar os dados no branco
                 DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
@@ -120,17 +124,29 @@ namespace GUI
 
                 if (operacao.Equals("inserir"))
                 {
-                    //Cadastrar uma categoria
+                    //Cadastrar um Produto
+                    modelo.CarregaImagem(foto);
                     bll.Incluir(modelo);
                     MessageBox.Show("Cadastro efetuado: Código " + modelo.Pro_cod.ToString());
                 }
                 else
                 {
-                    //Alterar uma categoria
+                    //Alterar um Produto
                     modelo.Pro_cod = Convert.ToInt32(txtCodigo.Text);
+
+                    if (foto.Equals("Foto Original"))
+                    {
+                        ModeloProduto mt = bll.CarregaModeloProduto(modelo.Pro_cod);
+                        modelo.Pro_foto = mt.Pro_foto;
+                    }
+                    else
+                    {
+                        modelo.CarregaImagem(foto);
+                    }
                     bll.Alterar(modelo);
                     MessageBox.Show("Cadastro Alterado");
                 }
+
                 LimpaTela();
                 alterarBotoes(1);
             }
@@ -139,6 +155,7 @@ namespace GUI
                 MessageBox.Show(erro.Message);
             }
         }
+
         private void btExcluir_Click_1(object sender, EventArgs e)
         {
             try
@@ -157,18 +174,60 @@ namespace GUI
             catch (Exception)
             {
                 MessageBox.Show("Impossivel excluir o registro." +
-                    "\n O registro está sendo ultilizado em outro local.");
+                                "\n O registro está sendo ultilizado em outro local.");
                 alterarBotoes(3);
             }
         }
 
+        private void btLocalizar_Click_1(object sender, EventArgs e)
+        {
+            frmConsultaProduto f = new frmConsultaProduto();
+            f.ShowDialog();
+            if (f.codigo != 0)
+            {
+                DALConexao cx = new DALConexao(DadosDaConexão.StringDeConexao);
+                BLLProduto bll = new BLLProduto(cx);
+                ModeloProduto modelo = bll.CarregaModeloProduto(f.codigo);
 
+                txtCodigo.Text = modelo.Pro_cod.ToString();
+                txtNome.Text = modelo.Pro_nome;
+                txtDescricao.Text = modelo.Pro_descricao;
+                txtValorPago.Text = modelo.Pro_valorPago.ToString();
+                txtValorVenda.Text = modelo.Pro_valorVenda.ToString();
+                txtQtde.Text = modelo.Pro_quantidade.ToString();
+                cbUnidade.SelectedValue = modelo.Umed_cod;
+                cbCategoria.SelectedValue = modelo.Cat_cod;
+                cbSubCategoria.SelectedValue = modelo.Scat_cod;
 
+                try
+                {
+                    if (modelo.Pro_foto != null)
+                    {
+                        MemoryStream ms = new MemoryStream(modelo.Pro_foto);
+                        pbFoto.Image = Image.FromStream(ms);
+                        foto = "Foto Original";
+                    }
+                }
+                catch
+                {
+                }
 
+                alterarBotoes(3);
+            }
+            else
+            {
+                LimpaTela();
+                alterarBotoes(1);
+            }
 
+            f.Dispose();
+        }
 
-
-
+        private void btAlterar_Click_1(object sender, EventArgs e)
+        {
+            operacao = "alterar";
+            alterarBotoes(2);
+        }
 
         /*
          *
@@ -179,6 +238,7 @@ namespace GUI
          *
          *
          */
+
         private void txtQtde_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -186,18 +246,20 @@ namespace GUI
                 e.Handled = true;
             }
         }
+
         private void txtValorPago_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8
-                && e.KeyChar != ',' && e.KeyChar != '.')
+                                         && e.KeyChar != ',' && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
+
             if (e.KeyChar == ',' || e.KeyChar == '.')
             {
-                if (!txtValorPago.Text.Contains("."))
+                if (!txtValorPago.Text.Contains(","))
                 {
-                    e.KeyChar = '.';
+                    e.KeyChar = ',';
                 }
                 else
                 {
@@ -205,18 +267,20 @@ namespace GUI
                 }
             }
         }
+
         private void txtValorVenda_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8
-                && e.KeyChar != ',' && e.KeyChar != '.')
+                                         && e.KeyChar != ',' && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
+
             if (e.KeyChar == ',' || e.KeyChar == '.')
             {
-                if (!txtValorVenda.Text.Contains("."))
+                if (!txtValorVenda.Text.Contains(","))
                 {
-                    e.KeyChar = '.';
+                    e.KeyChar = ',';
                 }
                 else
                 {
@@ -224,50 +288,53 @@ namespace GUI
                 }
             }
         }
+
         private void txtValorPago_Leave(object sender, EventArgs e)
         {
-            if (txtValorPago.Text.Contains(".") == false)
+            if (txtValorPago.Text.Contains(",") == false)
             {
-                txtValorPago.Text += ".00";
+                txtValorPago.Text += ",00";
             }
             else
             {
-                if (txtValorPago.Text.IndexOf(".") == txtValorPago.Text.Length - 1)
+                if (txtValorPago.Text.IndexOf(",") == txtValorPago.Text.Length - 1)
                 {
                     txtValorPago.Text += "00";
                 }
             }
+
             try
             {
                 Double d = Convert.ToDouble(txtValorPago.Text);
             }
             catch
             {
-                txtValorPago.Text = "0.00";
+                txtValorPago.Text = "0,00";
             }
         }
+
         private void txtValorVenda_Leave(object sender, EventArgs e)
         {
-            if (txtValorVenda.Text.Contains(".") == false)
+            if (txtValorVenda.Text.Contains(",") == false)
             {
-                txtValorVenda.Text += ".00";
+                txtValorVenda.Text += ",00";
             }
             else
             {
-                if (txtValorVenda.Text.IndexOf(".") == txtValorVenda.Text.Length - 1)
+                if (txtValorVenda.Text.IndexOf(",") == txtValorVenda.Text.Length - 1)
                 {
                     txtValorVenda.Text += "00";
                 }
             }
+
             try
             {
                 Double d = Convert.ToDouble(txtValorVenda.Text);
             }
             catch
             {
-                txtValorVenda.Text = "0.00";
+                txtValorVenda.Text = "0,00";
             }
         }
-
     }
 }

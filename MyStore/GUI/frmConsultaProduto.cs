@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class frmConsultaProduto : Form
     {
+        public int codigo = 0;
         public frmConsultaProduto()
         {
             InitializeComponent();
@@ -48,6 +49,24 @@ namespace GUI
             dgvDados.Columns[8].Width = 50;
             dgvDados.Columns[9].HeaderText = "SubCategoria";
             dgvDados.Columns[9].Width = 50;
+
+
+            //Colunas ocultadas
+            dgvDados.Columns["pro_foto"].Visible = false;
+            dgvDados.Columns["pro_valorpago"].Visible = false;
+            dgvDados.Columns["cat_cod"].Visible = false;
+            dgvDados.Columns["scat_cod"].Visible = false;
+            dgvDados.Columns["umed_cod"].Visible = false;
+
+        }
+
+        private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                Close();
+            }
         }
     }
 }
