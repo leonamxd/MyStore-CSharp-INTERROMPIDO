@@ -5,7 +5,6 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-// ReSharper disable All
 
 namespace GUI
 {

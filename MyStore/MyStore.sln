@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{ADD68EC9-C6A3-4F3F-9774-18C8CBC7E871}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{5218FE02-22EA-4EDB-A79C-84C9311706AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BBL\BLL.csproj", "{C9D3CA9E-2ED8-44BB-AFA1-42C4AD8381C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferramentas", "Ferramentas\Ferramentas.csproj", "{22D1C484-59B5-4729-8D7A-2FD42D358D08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C9D3CA9E-2ED8-44BB-AFA1-42C4AD8381C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9D3CA9E-2ED8-44BB-AFA1-42C4AD8381C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9D3CA9E-2ED8-44BB-AFA1-42C4AD8381C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D1C484-59B5-4729-8D7A-2FD42D358D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D1C484-59B5-4729-8D7A-2FD42D358D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D1C484-59B5-4729-8D7A-2FD42D358D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D1C484-59B5-4729-8D7A-2FD42D358D08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

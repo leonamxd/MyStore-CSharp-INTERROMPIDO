@@ -8,22 +8,17 @@ namespace DAL
 {
     public class DadosDaConexão
     {
+        public static String servidor = @"DESKTOP-PP47R87\SQLEXPRESS";
+        public static String banco = "MyStore";
+        public static String usuario = "sa";
+        public static String senha = "321300Xd";
+
         public static String StringDeConexao
         {
             get
             {
-                return @"Data Source=DESKTOP-PP47R87\SQLEXPRESS;Initial Catalog=MyStore;User ID=sa;Password=321300Xd";
+                return @"Data Source=" + servidor + ";Initial Catalog=" + banco + ";User ID="+ usuario +";Password=" + senha;
             }
         }
-
-        /*public static String StringDeConexao
-        {
-            get
-            {
-                return "Data Source=DESKTOP-UMKT0NL;" +
-                    "Initial Catalog=MyStore;User ID=sa;" +
-                    "Password=321300Xd";
-            }
-        }*/
     }
 }

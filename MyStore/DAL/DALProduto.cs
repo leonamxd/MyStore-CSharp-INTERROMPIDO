@@ -2,7 +2,6 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-// ReSharper disable All
 
 namespace DAL
 {
@@ -61,9 +60,9 @@ namespace DAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao._conexao;
-            cmd.CommandText = "update Produto set pro_nome = @nome, pro_descricao = @descricao" +
+            cmd.CommandText = "update Produto set pro_nome = @nome, pro_descricao = @descricao, " +
                 "pro_foto = @foto, pro_valorpago = @valorpago, pro_valorvenda = @valorvenda, " +
-                "pro_qtde = @qtde, undmed_cod = @undmedcod, cat_cod = @catcod, scat_cod = @scatcod " +
+                "pro_qtde = @qtde, umed_cod = @umedcod, cat_cod = @catcod, scat_cod = @scatcod " +
                 "where pro_cod = @codigo";
             cmd.Parameters.AddWithValue("@nome", _obj.Pro_nome);
             cmd.Parameters.AddWithValue("@descricao", _obj.Pro_descricao);

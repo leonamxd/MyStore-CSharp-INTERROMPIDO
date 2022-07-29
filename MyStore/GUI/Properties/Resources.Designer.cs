@@ -83,9 +83,29 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap database_view_64px {
+            get {
+                object obj = ResourceManager.GetObject("database_view_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_64px {
             get {
                 object obj = ResourceManager.GetObject("delete_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enter_64px {
+            get {
+                object obj = ResourceManager.GetObject("enter_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
